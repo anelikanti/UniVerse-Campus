@@ -1,4 +1,4 @@
-**UniVerse: Campus Event Management with Gemini AI**
+**UniVerse: AI Driven Campus Event Manager**
 
 UniVerse is a simple, modern web application for campus event management, designed for both event organizers and participants. Organizers can effortlessly create and manage events, while participants can browse, register for, and attend them. The application features an interactive calendar for scheduling, detailed event views, and leverages the Google Gemini AI for intelligent event proposal generation.
 
