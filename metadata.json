@@ -1,0 +1,5 @@
+{
+  "name": "UniVerse",
+  "description": "A simple web application for campus event management where organizers can create and manage events, and participants can register for and attend events. Features a calendar for scheduling and includes AI-powered proposal generation.",
+  "requestFramePermissions": []
+}
