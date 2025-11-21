@@ -78,8 +78,7 @@ const OrganizerDashboard: React.FC<OrganizerDashboardProps> = ({ events, onCreat
         handleCloseForm(); // Close the modal on successful event creation.
         return createdEvent; // Return the created event.
       } catch (err: any) {
-        console.error('Error creating event:', err);
-        // Set a user-friendly error message for the form.
+        // Only set a user-friendly error message for the form, logging is handled by App.tsx.
         setFormSubmissionError(err.message || 'Failed to create event. Please try again.');
         throw err; // Re-throw the error to `EventForm` for its own error display logic.
       } finally {

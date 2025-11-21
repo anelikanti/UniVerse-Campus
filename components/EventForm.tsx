@@ -141,8 +141,7 @@ const EventForm: React.FC<EventFormProps> = ({ onSubmit, onCancel, loading, erro
         await onSubmit(formData); // Call the parent's onSubmit function.
         // The parent component is responsible for closing the modal and clearing state.
       } catch (submitError: any) {
-        // Log the error and re-throw it so the parent component can catch and display it.
-        console.error("Submission failed:", submitError);
+        // Only re-throw the error, logging is handled at a higher level (App.tsx).
         throw submitError;
       }
     }

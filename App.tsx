@@ -18,14 +18,12 @@ import Button from './components/Button';
 // Declare the AIStudio interface globally to ensure type compatibility if it's implicitly
 // defined elsewhere, and then extend `window` with this type.
 // This resolves the "Subsequent property declarations must have the same type" error.
-interface AIStudio {
-  hasSelectedApiKey: () => Promise<boolean>;
-  openSelectKey: () => Promise<void>;
-}
-
 declare global {
   interface Window {
-    aistudio?: AIStudio;
+    aistudio?: {
+      hasSelectedApiKey: () => Promise<boolean>;
+      openSelectKey: () => Promise<void>;
+    };
   }
 }
 
