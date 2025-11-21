@@ -4,10 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UniVerse</title>
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS CDN for utility-first styling.
+         This allows us to rapidly build modern user interfaces without writing custom CSS. -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Favicon (optional) -->
+    <!-- Favicon for browser tab/bookmark icon, using an SVG emoji for simplicity. -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%22 y=%2290%22 style=%22font-size:90px; text-anchor:middle;%22>📅</text></svg>" type="image/svg+xml">
+    <!-- Import map for defining module specifier aliases, allowing cleaner imports in JS/TS files.
+         This is especially useful in environments like AI Studio that load modules from CDNs,
+         ensuring that package names resolve correctly to their CDN URLs. -->
 <script type="importmap">
 {
   "imports": {
@@ -22,7 +26,10 @@
 </script>
 </head>
 <body class="bg-gray-100 font-sans antialiased">
+    <!-- The root div where the React application will be mounted. -->
     <div id="root"></div>
+    <!-- The main application script, loaded as an ES module.
+         The `type="module"` attribute enables modern JavaScript module features. -->
     <script type="module" src="/index.tsx"></script>
 </body>
 </html>
