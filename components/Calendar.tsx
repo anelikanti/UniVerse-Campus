@@ -295,6 +295,7 @@ const Calendar: React.FC<CalendarProps> = ({ events, onRegisterEvent, isParticip
               className={`relative p-2 rounded-md h-20 sm:h-24 flex flex-col justify-between items-center text-center transition-colors duration-150
               ${day.isCurrentMonth ? 'bg-gray-50 hover:bg-gray-100 cursor-pointer' : 'bg-gray-200 text-gray-400 cursor-not-allowed'}
               ${day.isToday ? 'border-2 border-blue-500 bg-blue-100 hover:bg-blue-200' : ''}
+              ${day.events.length > 0 && !day.isToday ? 'border-2 border-red-500' : ''}
               ${isSelectedDay ? 'ring-2 ring-blue-500 ring-offset-2' : ''}
             `}
               onClick={() => day.isCurrentMonth && handleDayClick(day)} // Only allow clicks for days in the current month.
